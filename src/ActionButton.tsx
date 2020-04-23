@@ -1,14 +1,14 @@
-import IAction from "./IAction";
 import React from "react";
 
 interface IActionHolder {
-    action: IAction
+    name: string,
+    func: Function
 }
 
 export default function ActionButton(props: IActionHolder) {
     return (
-        <button onClick={_ => props.action.do}>
-            {props.action.name}
+        <button onClick={_ => props.func()}>
+            {props.name}
         </button>
     );
 }

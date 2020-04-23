@@ -1,7 +1,8 @@
 import IUnit from "./IUnit";
+import IBattleModel from "./IBattleModell";
 
-export default class BattleModel {
-    constructor(self: IUnit, enemy: IUnit) {
-        
+export default class BattleModel implements IBattleModel {
+    constructor(public self: IUnit, public enemy: IUnit) {
+
     }
 }

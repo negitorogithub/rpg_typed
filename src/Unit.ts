@@ -1,6 +1,7 @@
 import IUnit from "./IUnit";
 
 export default class Unit implements IUnit {
-    constructor(readonly hp: number, readonly name: string) {
+    constructor(public maxHp: number, public hp: number, public name: string) {
     }
+
 }

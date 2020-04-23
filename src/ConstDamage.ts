@@ -8,6 +8,7 @@ export default class ConstDamage implements IAction {
     }
 
     do() {
+        console.log('押された')
         this.to.hp = this.to.hp - this.damage
     }
 }

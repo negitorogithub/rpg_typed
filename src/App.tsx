@@ -1,15 +1,18 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
 import BattleView from "./BattleView";
 import MasterData from "./MasterData";
 import BattleModel from "./BattleModel";
+import BattleAgent from "./BattleAgent";
 
 function App() {
     const battleModel = new BattleModel(MasterData.hero, MasterData.slime)
+    const battleAgent = new BattleAgent([MasterData.constDamage4, MasterData.randomDamage4, MasterData.dangerousTackle8])
+
 
     return (
         <div className="App">
-            <BattleView self={MasterData.hero} enemy={MasterData.slime}/>
+            <BattleView battleAgent={battleAgent} battleModel={battleModel}/>
         </div>
     );
 }
